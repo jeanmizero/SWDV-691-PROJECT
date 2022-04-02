@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Title -->
+{% block title %} Products {% endblock %} {% block content %}
+<div class="container py-5">
+    <div class="row mt-5">
+        <div class="col-10 mx-auto col-md-6 my-3">
+            <img src="{% static 'img/product-1.jpg'%}" alt="" />
+        </div>
+        <div class="col-10 mx-auto col-md-6 my-3">
+            <div>
+                <h1 class="product_title">Man Shirt</h1>
+                <h5 class="text-info font-italic mb-3">
+                    <span class="mr-1"> 89.99 </span>
+                </h5>
+                <p class="product_description">Product Description</p>
+                <p class="text-justify product_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo aspernatur ullam laborum cum dolor maxime et tempora reiciendis culpa sint aut, in veritatis consequuntur corrupti atque magnam nesciunt. Labore, similique?</p>
+            </div>
+            <p class="text-justify product_text"><b>Out of Stock</b></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
