@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
-    <a href="#" class="nabar-brand text-light text-uppercase font-weight-bold">African Boutique</a>
+    <a href="/" class="nabar-brand text-light text-uppercase font-weight-bold">African Boutique</a>
     <!-- Hamburger menu -->
     <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav" name="button">
     <span class="navbar-toggler-icon"></span>
@@ -9,11 +9,10 @@
             <li class="nav-item dropdown">
                 <a class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle" href="" data-toggle="dropdown">Categories</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="">Categories 1</a>
-                    <a class="dropdown-item" href="">Categories 2</a>
-                    <a class="dropdown-item" href="">Categories 3</a>
-                    <a class="dropdown-item" href="">Categories 4</a>
-                    <a class="dropdown-item" href="">Categories 5</a>
+                  <a class="dropdown-item" href="{% url 'home'%}">All Products</a>
+                  {% for category in links %}
+                    <a class="dropdown-item" href="{{category.get_url}}">{{category.name}}</a>
+                  {% endfor%}
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="">Contact</a></li>

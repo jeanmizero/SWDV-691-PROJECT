@@ -23,16 +23,18 @@ Home
 <!-- Create Data -->
 <div class="container">
     <div class="row">
-        {% for i in '123456'%}
+        {% for product in products %}
         <div class="col-9 mx-auto col-md-9 col-lg-3">
             <div class="card mb-4" style="border-color: transparent">
                 <div class="p-4">
-                    <img src="{% static 'img/female-pants.jpg' %}" class="card-img-top" alt="" />
+                    <a href="{{product.get_url}}">
+                        <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}" />
+                    </a>
                 </div>
                 <div class="card-footer d-flex justify-content-between" style="background: tranparent; border-color: transparent">
-                    <p class="font-weight-bold mb-0">Female Pant</p>
+                    <p class="font-weight-bold mb-0">{{product.name}}</p>
                     <h5 class="text-info font-italic mb-0">
-                        <span class="mr-1"> 67.99 </span>
+                        <span class="mr-1"> {{product.price}}</span>
                     </h5>
                 </div>
             </div>
