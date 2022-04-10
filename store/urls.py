@@ -1,8 +1,29 @@
+# from django.urls import path
+# from . import views
+
+# urlpatterns = [
+#     # Homepage url
+#     path('', views.home, name ="home"),
+#     path('category/<slug:category_slug>', views.home, name="products_by_category"),
+#     # Aboutpage url
+#     path('category/<slug:category_slug>/<slug:product_slug>', views.productPage, name ="product_detail"),
+#     # Create cart url
+#     # cart
+#     # path('cart',views.cart, name='cart'),
+#     path('cart', views.cart_detail, name ='cart_detail'),
+#     path('cart/add/<int:product_id>', views.add_cart, name="add_cart"),
+#     # remove item
+#     path('cart/remove/<int:product_id>', views.cart_remove, name='cart_remove'),
+#     # Delete item/cart
+
+# ]
+
 from django.urls import path
-from .import views
+from . import views
 
 urlpatterns = [
-    path('',views.home, name='home'),
+    # Homepage url
+    path('', views.home, name ='home'),
     path('category/<slug:category_slug>', views.home, name='products_by_category'),
     # Aboutpage url
     path('category/<slug:category_slug>/<slug:product_slug>', views.productPage, name ='product_detail'),
@@ -29,5 +50,4 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     # Contact
     path('contact/', views.contact, name='contact')
-
 ]

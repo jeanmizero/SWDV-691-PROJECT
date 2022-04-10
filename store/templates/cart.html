@@ -42,7 +42,7 @@ Cart
             <tr>
                 <td>
                     <a href="cart_item.product.get_url">
-                        <img src="{{cart_item.product.image.url}}" alt="">
+                        <img src="{{cart_item.product.image.url}}" width ="110" height="110" alt="Product Image">
                     </a>
                 </td>
                 <td class="text-left">
@@ -83,7 +83,7 @@ Cart
             <!--  -->
             <tbody>
                 <tr>
-                    <td>Please Review your cart</td>
+                    <td>Please Review your Cart</td>
                 </tr>
                 <!-- Display total price -->
                 <tr>
@@ -101,7 +101,7 @@ Cart
             <!-- Date: Any Future Date -->
             <form action="" action="" method="POST">
                 {% csrf_token %}
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ data_key }}" data-amount="{{ stripe_total}}" data-name="Z-Store" data-description="{{ description }}" data-locale="auto" data-currency="usd" data-shipping-address="true"
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ data_key }}" data-amount="{{ stripe_total}}" data-name="African Boutique" data-description="{{ description }}" data-locale="auto" data-currency="usd" data-shipping-address="true"
                     data-billing-address="true" data-zip-code="true">
                 </script>
             </form>
@@ -118,3 +118,6 @@ Cart
 {% endif %}
 <!--  -->
 {% endblock %}
+
+
+
