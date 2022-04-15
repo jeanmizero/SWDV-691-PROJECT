@@ -45,12 +45,6 @@ class Product(models.Model):
         ordering = ('name',)
         verbose_name = 'product'
         verbose_name_plural = 'products'
-        
-    # def get_image(self): 
-    #     if not self.image == '' or None:
-    #         return self.image.url
-    #     else:
-    #         return None
     
     # Get product url   
     def get_url(self):

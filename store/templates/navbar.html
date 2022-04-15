@@ -63,13 +63,9 @@
                 </div>
             </li>
             <!--End Drop manu -->
-            <!-- <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="">Category</a></li> -->
             <li class="nav-item">
                 <a class="nav-link active text-light font-weight-bold text-uppercase px-3" href="{% url 'contact' %}">Contact</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link active text-light font-weight-bold px-3" href="">About</a>
-            </li> -->
 
             {% if request.user.is_authenticated and request.user.first_name %}
             <li class="nav-item dropdown">
@@ -89,14 +85,13 @@
             {% else %}
             <li class="nav-item">
                 <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="{% url 'signup' %}">
-                Sign Up </>
+                Sign Up </i>
                 </a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link text-light font-weight-bold text-uppercase px-3" href="{% url 'signin' %}">
                 Sign In </i> 
-                <!-- <i class="fas fa-sign-in-alt"></i> -->
                 </a>
             </li>
             {% endif %} {% if item_count > 0 %}
