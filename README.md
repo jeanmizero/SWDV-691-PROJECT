@@ -25,23 +25,23 @@ Users can
 
 ### Linux/macOS/BASH
 
-python3 -m venv venv
-source ./venv/bin/activate
-pip install -r requirements.txt
+python3 -m venv venv  
+source ./venv/bin/activate  
+pip install -r requirements.txt  
 
 #### Windows
 
-python -m venv venv
-.\\venv\\scripts\\activate
-pip install -r requirements.txt
+python -m venv venv  
+.\\venv\\scripts\\activate  
+pip install -r requirements.txt  
 
 ## Installation required for Stripe
 
 - pip install stripe
 
-  For Testing payment[Stripe](https://stripe.com/docs/testing)
-  CARD NUMBER (VISA): 4242 4242 4242 4242.
-  CVC: Any 3 digits
-  DATE: Any future date
-  ADDRESS: Any Address
-  NAME: Any name
+  For Testing payment [Stripe](https://stripe.com/docs/testing)    
+  CARD NUMBER (VISA): 4242 4242 4242 4242.  
+  CVC: Any 3 digits  
+  DATE: Any future date  
+  ADDRESS: Any Address  
+  NAME: Any name  
