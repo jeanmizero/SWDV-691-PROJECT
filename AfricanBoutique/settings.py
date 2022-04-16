@@ -143,3 +143,7 @@ STRIPE_PUBLISHABLE_KEY = 'pk_test_51K0sDWHAlOpnvcMUPsE39mMKy78xkkRvOQgMVJyrpC9o0
 STRIPE_SECRET_KEY = 'sk_test_51K0sDWHAlOpnvcMUo1LT2cHD1J13vOUK4asju0u2PeLaoXDhzOLNwIJgKYLYKYzWBnsHGPxoaeZKIGHX7nnpbWjk00fWicmLCU'
 
 CRISPY_TEMPLATE_PACK ='bootstrap4'
+
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
