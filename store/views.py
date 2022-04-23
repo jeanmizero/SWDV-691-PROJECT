@@ -32,8 +32,15 @@ def productPage(request, category_slug, product_slug):
         product = Product.objects.get(category__slug=category_slug, slug=product_slug)
     except Exception as e:
         raise e
-    return render(request, 'product.html', {'product': product})
+    # return render(request, 'product.html', {'product': product})
+# Create review
+    if request.method == 'POST' and request.user.is_authenticated and request.POST['content'].strip() != '':
+        Review.objects.create(product=product,
+                            user=request.user,
+                            content=request.POST['content'])
+    reviews = Review.objects.filter(product=product)
 
+    return render(request, 'product.html', {'product': product, 'reviews': reviews})
 #  Create cart
 def _cart_id(request):
     cart = request.session.session_key
