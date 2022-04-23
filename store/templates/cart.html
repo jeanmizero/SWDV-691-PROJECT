@@ -4,8 +4,8 @@
 Cart 
 {% endblock %} 
 {% block content %} 
-{% if not cart_items %}
 
+{% if not cart_items %}
 <div class="text-center">
     <br>
     <h1 class="text-center product_title">
@@ -25,7 +25,6 @@ Cart
     </div>
 </div>
 
-<!--  -->
 <div class="row mx-auto">
     <!-- Leff side Table-->
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
@@ -42,7 +41,7 @@ Cart
             <tr>
                 <td>
                     <a href="cart_item.product.get_url">
-                        <img src="{{cart_item.product.image.url}}" width ="110" height="110" alt="Product Image">
+                        <img src="{{cart_item.product.image.url}}" width ="100" height="100" alt="Product Image">
                     </a>
                 </td>
                 <td class="text-left">
@@ -56,13 +55,13 @@ Cart
                 </td>
                 {% if cart_item.quantity < cart_item.product.stock %} 
                 <td>
-                    &nbsp;<a href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus-circle cart_icon"></i></a> &nbsp;
-                    <a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus-circle cart_icon"></i></a> &nbsp;
+                    <a href="{% url 'add_cart' cart_item.product.id %}"><i class="fas fa-plus-circle cart_icon"></i></a> 
+                    <a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-minus-circle cart_icon"></i></a> 
                     <a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-trash-alt cart_icon"></i></a>
-                    </td>
+                </td>
                 {% else %}
                     <td>
-                        &nbsp;<a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-plus-circle cart_icon"></i></a> &nbsp;
+                        <a href="{% url 'cart_remove' cart_item.product.id %}"><i class="fas fa-plus-circle cart_icon"></i></a> 
                         <a href="{% url 'cart_remove_product' cart_item.product.id %}"><i class="fas fa-minus-circle cart_icon"></i></a>
                     </td>
                 {% endif %}
@@ -80,7 +79,6 @@ Cart
                     </th>
                 </tr>
             </thead>
-            <!--  -->
             <tbody>
                 <tr>
                     <td>Please Review your Cart</td>
@@ -113,10 +111,7 @@ Cart
         </div>
     </div>
 </div>
-
-<!--  -->
 {% endif %}
-<!--  -->
 {% endblock %}
 
 

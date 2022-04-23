@@ -4,9 +4,8 @@
 {% block title %}
 Create a New Account
 {% endblock %}
-
 {% block content %}
-
+<!-- Bootstrap Crispy form template Sign Up -->
     <div>
         {% if not form.is_valid %}
             <div class="mx-auto">
@@ -38,9 +37,9 @@ Create a New Account
                     Dear Customer,
                     <br>
                     <br>
-                    Your account has been created and it is ready to use.
+                    Your account has been created.
                     <br>
-                    <a href="{% url 'home' %}">Continue shopping</a> and enjoy the variety of products that we have at the Z-Store.
+                    <a href="{% url 'home' %}">Continue shopping</a> and enjoy the variety of products that we have at the African Boutique.
                     </p>
                 </div>
             </div>

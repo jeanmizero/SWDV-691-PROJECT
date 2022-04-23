@@ -5,7 +5,7 @@
 CONTACT 
 {% endblock %} 
 {% block content %}
-
+<!-- Contact Form -->
 <div class="container">
     <div class="row justify-content-center mt-5">
         <div class="col-12 col-md-8 col-lg-6 pb-5">
@@ -19,6 +19,7 @@ CONTACT
                         </div>
                     </div>
                     <div class="card-body p-3">
+                        <!-- Name -->
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -27,7 +28,7 @@ CONTACT
                                 {% render_field form.name class+="form-control" placeholder="Your Name" %}
                             </div>
                         </div>
-
+                        <!-- Email -->
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -36,7 +37,7 @@ CONTACT
                                 {% render_field form.from_email class+="form-control" placeholder="Your Email" %}
                             </div>
                         </div>
-
+                        <!-- Subject -->
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -45,7 +46,7 @@ CONTACT
                                 {% render_field form.subject class+="form-control" placeholder="Your Subject" %}
                             </div>
                         </div>
-
+                        <!-- Message -->
                         <div class="form-group">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -57,7 +58,7 @@ CONTACT
 
                     </div>
                 </div>
-
+                <!-- Submit -->
                 <button type="submit" class="btn btn-dark btn-block rounded-0 py-2 mt-3">Submit</button>
 
             </form>

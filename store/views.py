@@ -34,10 +34,6 @@ def productPage(request, category_slug, product_slug):
         raise e
     return render(request, 'product.html', {'product': product})
 
-# Create Cart
-# def cart(request):
-#     return render(request, 'cart.html')
-    
 #  Create cart
 def _cart_id(request):
     cart = request.session.session_key
@@ -157,8 +153,6 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
 
     return render(request, 'cart.html', dict(cart_items=cart_items, total=total, counter=counter, data_key=data_key, stripe_total=stripe_total, description=description))
     
-    
-
 # Remove cart
 def cart_remove(request, product_id):
     cart = Cart.objects.get(cart_id=_cart_id(request))
@@ -217,7 +211,7 @@ def signinView(request):
         form = AuthenticationForm()
     return render(request, 'signin.html', {'form': form})
 
-
+# Sign Up View
 def signoutView(request):
     logout(request)
     return redirect('signin')
@@ -241,11 +235,11 @@ def viewOrder(request, order_id):
         order_items = OrderItem.objects.filter(order=order)
     return render(request, 'order_detail.html', {'order': order, 'order_items': order_items})
 
-# Search method
+# Search method enabled
 def search(request):
     products = Product.objects.filter(name__contains=request.GET['title'])
     return render(request, 'home.html', {'products': products})
-
+# Contact form
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -267,8 +261,6 @@ def contact(request):
             msg.send()
 
             return render(request, 'contact_success.html')
-
-
     else:
         form = ContactForm()
 

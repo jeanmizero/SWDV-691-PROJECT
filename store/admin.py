@@ -1,6 +1,5 @@
 from django.contrib import admin
 from stripe.api_resources import product
-
 # Register your models here.
 from .models import Category, Product, Order, OrderItem, Review
 
