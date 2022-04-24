@@ -31,8 +31,7 @@ SECRET_KEY = 's#6g!@c(4j9^=^o++l4!)*k^i+e=b_c@$=t=ko#--%*hr%1vki'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['african-boutique-ecommerce.azurewebsites.net']
+ALLOWED_HOSTS = ['african-boutique-ecommerce-website-env.eba-khxydzdn.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
